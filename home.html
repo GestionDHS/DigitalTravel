@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Digital Travel</title>
+
+    <!-- BORRAR -->
+    <link rel="stylesheet" href="style.css">
+    <!-- BORRAR -->
+</head>
+
+<body>
+
+  <div id="navbar">
+      <div id="panelLateral" class="panelLateral">
+        <span class="closebtn" onclick="cerrarPanel()">×</span>
+        <button onclick="abrirSeccionReservas()">Reservar Vuelo</button>
+        <button onclick="abrirSeccionNotas();">Mis Notas</button>
+        <button>Mis Hoteles</button>
+    </div>
+    <button class="openbtn" onclick="abrirPanel()">&#9776; </button>
+    <h2>Digital <span> Travel</span></h2>
+    <button id="botonContraste" onclick="toggleContraste();">Cambiar Contraste</button>
+    <button id="botonMovimiento" onclick="toggleMovimiento();">Activar Movimiento</button>
+  </div>
+
+  <main id="principal">
+    <section id="reservas">
+      <div id="formReservas">
+          <form id="myForm">
+              <label for="nombre">Nombre</label>
+              <input required type="text" id="nombre" name="nombre" placeholder="Escriba su nombre..." value="Pedro">
+
+              <label for="apellido">Apellido</label>
+              <input required type="text" id="apellido" name="apellido" placeholder="Escriba su apellido" value="Domínguez">
+
+              <label for="fechaPartida">Fecha Partida</label>
+              <input required type="date" name="fechaPartida" value="2020-12-31">
+
+              <label for="origen">Origen</label>
+              <select id="origen" name="origen"></select>
+
+              <label for="destino">Destino</label>
+              <select id="destino" name="destino"></select>
+
+              <button id="botonReserva" onclick="reservarVuelo()">¡Reservar Vuelo!</button>
+
+          </form>
+      </div>
+
+
+      <p id="parrafoFinal"></p>
+      <img src="https://media.giphy.com/media/3o72EZplI5RBdJU17q/giphy.gif" alt="avion" id="fotoAvion">
+
+    </section>
+    <section id="notas" class="floatingActivado">
+      <div id="caja1" class="caja floating">
+        <div class="contenido" onclick="cargarCaja();"></div>
+      </div>
+
+      <div id="caja2" class="caja floating">
+        <div class="contenido" onclick="cargarCaja();"></div>
+      </div>
+
+      <div id="caja3" class="caja floating">
+        <div class="contenido" onclick="cargarCaja();"></div>
+      </div>
+
+      <div id="caja4" class="caja floating">
+        <div class="contenido"  onclick="cargarCaja();"></div>
+      </div>
+      <div id="caja5" class="caja floating">
+        <div class="contenido" onclick="cargarCaja();"></div>
+      </div>
+
+      <div id="caja6" class="caja floating">
+        <div class="contenido" onclick="cargarCaja();"></div>
+      </div>
+
+      <div id="caja7" class="caja floating">
+        <div class="contenido" onclick="cargarCaja();"></div>
+      </div>
+
+      <div id="caja8" class="caja floating">
+        <div class="contenido"  onclick="cargarCaja();"></div>
+      </div>
+    </section>
+
+  </main>
+  <aside id="chat" class="oculto">
+    <div id="panelAbrirChat" onclick="mostrarOcultarChat()">
+        <h2 class="chatSubtitle">Chatea con Marta</h2>
+    </div>
+    <div class="container">
+        <ul id="lista-de-msjs">
+            <li class="el">¡Hola! Mi nombre es <b>Marta</b>. ¿En qué puedo ayudarte?</li>
+        </ul>
+    </div>
+    <form id="mensaje">
+        <input id="inputMensaje" type="text" placeholder="Enviar mensaje...">
+        <button id="envioChat" onclick="enviarMensajeChat()"> &#10146; </button>
+    </form>
+  </aside>
+
+    <!-- BORRAR -->
+    <script src="hidden.js"></script>
+    <script src="alumno.js"></script>
+    <!-- BORRAR -->
+</body>
+
+</html>
